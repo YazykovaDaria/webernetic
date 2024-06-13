@@ -4,6 +4,7 @@ $max-width: 1920px;
     max-width: $max-width;
     width: 100%;
     padding: 36px 40px;
+    margin: 0 auto;
 
     @include media-max-md() {
         padding: 24px;
@@ -17,6 +18,18 @@ $max-width: 1920px;
 .title {
     @include font(30px, 48px, 500);
     color: #1f4284;
+
+    @include media-max-xl() {
+        @include font(26px, 160%);
+    }
+
+    @include media-max-md() {
+        font-size: 20px;
+    }
+
+    @include media-max-s() {
+        font-size: 17px;
+    }
 }
 
 .subtitle {
@@ -25,6 +38,17 @@ $max-width: 1920px;
 
 .text {
     @include font(17px, 27.2px, 400);
+
+    @include media-max-xl() {
+        line-height: 160%;
+    }
+
+    @include media-max-md() {
+        font-size: 15px;
+    }
+    @include media-max-s() {
+        font-size: 13px;
+    }
 }
 
 .sr-only {

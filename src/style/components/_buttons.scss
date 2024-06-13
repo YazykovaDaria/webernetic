@@ -13,6 +13,10 @@
     @include hover() {
         cursor: pointer;
     }
+
+    @include media-max-md() {
+        font-size: 15px;
+    }
 }
 
 .btn-main {
@@ -38,4 +42,8 @@
         border-color: transparent;
         background-color: #d2c2ea;
     }
+}
+
+.btn-round {
+    border-radius: 60px;
 }
