@@ -5,8 +5,12 @@ html {
 html,
 body {
     height: 100%;
-}
 
-.main {
-    flex-grow: 1;
+    background-color: $bg-body;
+
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: $font-color;
 }

@@ -1,3 +1,32 @@
+$max-width: 1920px;
+
+.container {
+    max-width: $max-width;
+    width: 100%;
+    padding: 36px 40px;
+
+    @include media-max-md() {
+        padding: 24px;
+    }
+
+    @include media-max-s() {
+        padding: 14px 24px;
+    }
+}
+
+.title {
+    @include font(30px, 48px, 500);
+    color: #1f4284;
+}
+
+.subtitle {
+    @include font(24px, 32.78px, 500);
+}
+
+.text {
+    @include font(17px, 27.2px, 400);
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
