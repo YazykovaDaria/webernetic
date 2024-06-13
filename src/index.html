@@ -30,7 +30,6 @@
             </button>
           </div>
 
-
           <div class="demo__img">
             <img alt="image" src="./assets/images/image-desk.png"
               srcset="./assets/images/image-mob.png 375w,./assets/images/image-tablet.png 420w,./assets/images/image-descM.png 880w,./assets/images/image-desk.png 990w"
@@ -38,21 +37,46 @@
           </div>
         </div>
       </div>
-
-
     </section>
-    <!-- <div class="btn-main">test</div>
-    <div class="btn-side">test</div> -->
 
-    <!-- <input type="text" class="input" placeholder="test"></input> -->
+    <div class="modal js-modal">
+      <div class="modal__inner">
 
-    <!-- <label class="checkbox">
-      <input type="checkbox">
-      <span>Запомнить пароль</span>
-    </label> -->
+        <div class="modal__close">
+
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 6L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="modal__content js-modal-content">
+
+          <form action="#" class="login">
+            <h2 class="subtitle login__title">Войти в систему</h2>
+
+            <div class="login__group">
+              <input type="text" class="input" placeholder="Email/Телефон"></input>
+              <input type="text" class="input" placeholder="Пароль"></input>
+            </div>
+
+            <label class="checkbox login__checkbox">
+              <input type="checkbox">
+              <span>Запомнить пароль</span>
+            </label>
+
+            <a href="#" class="login__subtitle">Восстановить</a>
+
+            <div class="login__group">
+              <button type="submit" class="btn-main">Войти</button>
+              <a href="#" class="btn-side">Зарегестрироваться</a>
+            </div>
+          </form>
+
+        </div>
+      </div>
 
   </main>
-
 </body>
 
 </html>

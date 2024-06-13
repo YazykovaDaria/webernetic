@@ -1,0 +1,37 @@
+.login {
+    @include flex-col();
+
+    &__title {
+        margin-bottom: 18px;
+    }
+
+    &__group {
+        @include flex-col(4px);
+
+        min-width: 452px;
+    }
+
+    &__checkbox {
+        margin-block: 24px;
+    }
+
+    &__subtitle {
+        @include transition(color);
+
+        margin-bottom: 36px;
+
+        font-weight: 500;
+        font-size: 20px;
+        color: $brand-main;
+
+        @include hover() {
+            color: #49277f;
+        }
+    }
+
+    @include media-max-s() {
+        &__group {
+            min-width: 320px;
+        }
+    }
+}
