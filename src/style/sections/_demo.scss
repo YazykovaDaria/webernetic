@@ -1,0 +1,124 @@
+.demo {
+    &__inner {
+        @include flex-row(null, center, space-between);
+
+        background-color: $bg-section;
+        border-radius: 10px;
+    }
+
+    &__info {
+        padding-left: 72px;
+        padding-right: 10px;
+    }
+
+    &__text {
+        max-width: 511px;
+        margin-top: 18px;
+        margin-bottom: 36px;
+
+        color: #727272;
+    }
+
+    &__btn {
+        height: 68px;
+    }
+
+    &__btn-item {
+        @include flex-row(null, center, space-between);
+
+        min-width: 341px;
+        padding-left: 24px;
+        padding-right: 12px;
+        height: 68px;
+
+        img {
+            @include size(44px, 44px);
+        }
+    }
+
+    &__img {
+        width: calc(50% - 10px);
+        height: 456px;
+
+        img {
+            @include size(100%, 100%);
+
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            object-fit: cover;
+        }
+    }
+
+    @include media-max-xl() {
+        &__img {
+            width: 50%;
+        }
+    }
+
+    @include media-max-md() {
+        &__inner {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__info {
+            padding: 24px 24px 0px 24px;
+        }
+
+        &__text {
+            max-width: fit-content;
+            margin-bottom: 24px;
+        }
+
+        &__btn {
+            height: 56px;
+        }
+
+        &__btn-item {
+            padding-left: 18px;
+            padding-right: 10px;
+            min-width: 261px;
+
+            img {
+                @include size(36px, 36px);
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 360px;
+
+            img {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 10px;
+            }
+        }
+    }
+
+    @include media-max-s() {
+        &__inner {
+            gap: 18px;
+        }
+
+        &__info {
+            padding: 24px 24px 0px 24px;
+        }
+
+        &__text {
+            margin-top: 14px;
+            margin-bottom: 18px;
+        }
+
+        &__btn {
+            margin: 0 auto;
+        }
+
+        &__btn-item {
+            min-width: 279px;
+        }
+
+        &__img {
+            height: 202px;
+        }
+    }
+}

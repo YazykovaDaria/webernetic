@@ -1,0 +1,64 @@
+.modal {
+    @include size(100%, 100%);
+    @include flex-row(null, center, center);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: rgba(41, 41, 41, 0.6);
+
+    visibility: hidden;
+    overflow: auto;
+    opacity: 0;
+    z-index: 10;
+
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    cursor: pointer;
+
+    &--visible {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__inner {
+        @include flex-col(4px);
+
+        padding: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        background-color: $bg-section;
+        cursor: auto;
+    }
+
+    &__close {
+        @include size(52px, 52px);
+        @include flex-col(null, center, center);
+
+        align-self: flex-end;
+
+        border-radius: 10px;
+        background-color: $bg-body;
+
+        svg {
+            @include transition(stroke);
+
+            stroke: black;
+        }
+
+        @include hover() {
+            cursor: pointer;
+
+            svg {
+                stroke: red;
+            }
+        }
+    }
+
+    @include media-max-s() {
+        &__inner {
+            padding: 14px;
+        }
+    }
+}

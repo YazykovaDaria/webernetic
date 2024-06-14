@@ -1,0 +1,49 @@
+.btn {
+    @include flex-col(null, center, center);
+
+    height: 65px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+
+    background-color: transparent;
+    border-radius: 4px;
+
+    @include hover() {
+        cursor: pointer;
+    }
+
+    @include media-max-md() {
+        font-size: 15px;
+    }
+}
+
+.btn-main {
+    @extend .btn;
+    @include transition(background-color);
+
+    color: $bg-body;
+    background-color: $brand-main;
+
+    @include hover() {
+        background-color: #49277f;
+    }
+}
+
+.btn-side {
+    @extend .btn;
+
+    color: #244c98;
+    border: 1px solid $brand-main;
+    transition: border-color 0.3s ease-in, background-color 0.3s ease-in;
+
+    @include hover() {
+        border-color: transparent;
+        background-color: #d2c2ea;
+    }
+}
+
+.btn-round {
+    border-radius: 60px;
+}
