@@ -1,5 +1,7 @@
+import openLoginForm from "./components/login-form";
+
 const app = () => {
-    console.log("hi");
+    openLoginForm();
 };
 
 export default app;
